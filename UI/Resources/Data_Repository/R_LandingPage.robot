@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation  This is the global data repository to use while executing testcases
 Resource       R_Common.robot
+Resource       ../../../environments.robot
 
 *** Variables ***
 ${HOME_PAGE_URL}                ${APP_URL}

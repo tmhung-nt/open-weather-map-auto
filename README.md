@@ -48,17 +48,31 @@ Run following command in your terminal
 
    2.2. Run a test suite and just include a particular tag  
 `ExecutionScripts\local-Execution\execution-by-tag.bat  <Relative path to test suite file> <tag_name> `  
-    - **Examples:**   
+    - **Examples:**     
 `ExecutionScripts\local-Execution\execution-by-tag.bat  Tests\AmazonTests.robot  Smoke`  
   
   
     2.3. Run a test suite and just include a particular tag    
 `ExecutionScripts\local-Execution\execution-by-tag.bat  <Relative path to test suite file> <tag_name> `  
-    - **Examples:**   
+    - **Examples:**     
 `ExecutionScripts\local-Execution\execution-by-tag.bat  Tests\AmazonTests.robot  Smoke`
+
+3. Run by robot command directly
+    - **Examples:**   
+`robot -d Result_execution/single-thread --logtitle "Single Thread Test Log" --reporttitle "Single Thread Test Report" --listener 'allure_robotframework;test-results/allure' -v SELENIUM_HUB:   UI/Tests/SearchWeatherByCity.robot
+`
+
+4. Parallel execution 
+    - **Examples:**  
+` pabot --testlevelsplit -d Result_execution/parallel --logtitle "Parallel Test Log" --reporttitle "Parallel Test Report"  --listener 'allure_robotframework;test-results/allure' -v SELENIUM_HUB:   UI/Tests/SearchWeatherByCity.robot`
   
-3. Verify execution results/reports
-- Reports will be placed under **Result_execution** folder
+5. Verify execution results/reports
+- RobotFramework reports will be placed under **Result_execution** folder
+- We can view Allure report for historical test status as well by generating from allure's log files under `test-results` folder  
+```
+ sudo apt-get intall allure -y 
+ allure generate test-results -o allure-report
+```
 
 ## Run test in Zalenium Docker
 1. Make sure all the line ending type of all *.sh should be in LF (not CRLF of Windows)
