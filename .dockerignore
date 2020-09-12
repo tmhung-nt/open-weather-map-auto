@@ -1,0 +1,7 @@
+out/
+output/
+Result_execution/
+Results/
+venv/
+debug.log
+videos/

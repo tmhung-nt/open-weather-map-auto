@@ -1,0 +1,11 @@
+robotframework-allurereport
+allure_robotframework
+robotframework
+robotframework-pabot
+robotframework-seleniumlibrary
+robotframework-databaselibrary
+lxml
+paramiko
+robotframework-faker
+webdrivermanager
+RESTinstance

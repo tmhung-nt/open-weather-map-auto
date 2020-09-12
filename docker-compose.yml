@@ -1,0 +1,29 @@
+version: '2'
+services:
+
+  hub:
+    image: dosel/zalenium
+    ports:
+      - "4444:4444"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./videos:/home/seluser/videos
+    command: ["start",
+              "--screenWidth", "1920",
+              "--screenHeight", "1080",
+              "--timeZone", "Asia/Bangkok"
+            ]
+
+  robot:
+    build:
+      context: .
+      dockerfile: docker/robot/Dockerfile
+    depends_on:
+      - hub
+    environment:
+      - SELENIUM_URL=http://hub:4444
+      - ROBOT_ARGS
+    volumes:
+      - ./:/tests:rw
+      - ./test-results/reports:/tests/out:rw
+      - ./test-results/allure:/tests/output/allure:rw
