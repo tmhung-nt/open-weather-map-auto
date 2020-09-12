@@ -7,10 +7,15 @@ Test Teardown       Common.End Web Test
 
 
 *** Test Cases ***
-Anonymouse user can Search By City
+Anonymouse User Searches By Valid City Name
     [Tags]  Smoke
-    Search By City
+    Search By City      ho chi minh
+
+Anonymouse User Searches By Invalid City Name
+    [Tags]  Smoke
+    Search By City      hoChiMinh       not found
+
 
 Anonymouse user can see weather of searched city
-    [Tags]  Smoke  test
-    See Weather By City
+    [Tags]  Smoke
+    See Weather By City     ho chi minh

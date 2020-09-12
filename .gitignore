@@ -1,0 +1,14 @@
+.idea/
+Results/
+*.pyc
+*log.html
+*report.html
+*output.xml
+*debug.log
+selenium-screenshot-*.png
+test-results/
+Result_execution/
+out/
+output/
+videos/
+venv/

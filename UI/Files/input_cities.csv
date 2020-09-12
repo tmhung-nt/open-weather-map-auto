@@ -1,0 +1,4 @@
+*** Test Cases ***;${search_keyword};${search_result}
+valid city;nha trang;${EMPTY}
+valid city with country code;ho chi minh, vn;${EMPTY}
+invalid city;asdf; not found

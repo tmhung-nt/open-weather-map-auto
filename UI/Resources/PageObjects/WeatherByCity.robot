@@ -3,6 +3,7 @@ Documentation  Amazon top navigation
 Resource            ../Data_Repository/R_FindByCityResults.robot
 Resource            ../CommonUtils/UI_Utils.robot
 Resource            ../CommonUtils/StringUtils.robot
+# Library             Dialogs
 
 *** Variables ***
 ${HOURLY_FORCAST_TXT}       Hourly forecast
@@ -26,4 +27,6 @@ Verify Current City Name Matchs Search City
     ${current_city_name}=       Get Text        ${CITY_NAME}
     ${current_city_name_lowercase}=  Convert To Lower Case      ${current_city_name}
     ${search_city}=      Convert To Lower Case  ${search_city}
-    StringUtils.Check String Contains SubString     ${current_city_name_lowercase}  ${search_city}
+    Capture Page Screenshot     {index}.png
+    ${status}=  run keyword and return status   StringUtils.Check String Contains SubString     ${current_city_name_lowercase}  ${search_city}
+    # run keyword unless  ${status}       Pause Execution

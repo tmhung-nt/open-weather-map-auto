@@ -16,3 +16,4 @@ Enter Search Term
 
 Submit Search By Press Enter
     Press Keys     None      RETURN
+    Sleep  2s
