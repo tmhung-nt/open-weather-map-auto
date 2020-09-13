@@ -1,0 +1,24 @@
+{
+  "name": "web-automation-prototype",
+  "version": "1.0.0",
+  "description": "https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stubmatic": "stubmatic -v --logs --debug -d stub-repo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmhung-nt/ui-auto-prototype.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmhung-nt/ui-auto-prototype/issues"
+  },
+  "homepage": "https://github.com/tmhung-nt/ui-auto-prototype#readme",
+  "dependencies": {
+    "stubmatic": "^5.4.1"
+  }
+}

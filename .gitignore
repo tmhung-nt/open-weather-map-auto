@@ -20,3 +20,5 @@ venv/
 /example_stats.csv
 /example_failures.csv
 /example_stats_history.csv
+/node_modules/
+package-lock.json
