@@ -25,3 +25,7 @@ Reponse Field Value Should Be Null
 Reponse Field Value Should Be Array
     [Arguments]  ${json_path}
     REST.Array      ${json_path}
+
+Response Field Value Should Not Exist
+    [Arguments]  ${json_path}
+    REST.Missing    ${json_path}

@@ -6,7 +6,11 @@ class UrlEncodeDecode:
 		pass
 
 	def encode_url(self, url):
-		return urllib.parse.quote_plus(url)
+		_encode = urllib.parse.quote(url)
+		print(f"encode_url(): {url} to {_encode}")
+		return _encode
 		
 	def decode_url(self, url):
-		return urllib.parse.unquote_plus(url)
+		_decode = urllib.parse.unquote(url)
+		print(f"encode_url(): {url} to {_decode}")
+		return _decode

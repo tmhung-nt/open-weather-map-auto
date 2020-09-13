@@ -64,7 +64,7 @@ Run following command in your terminal
 
 4. Parallel execution 
     - **Examples:**  
-` pabot --testlevelsplit -d Result_execution/parallel --logtitle "Parallel Test Log" --reporttitle "Parallel Test Report"  --listener 'allure_robotframework;test-results/allure' -v SELENIUM_HUB:   UI/Tests/SearchWeatherByCity.robot`
+`pabot --testlevelsplit -d Result_execution/parallel --logtitle "Parallel Test Log" --reporttitle "Parallel Test Report"  --listener 'allure_robotframework;test-results/allure' -v SELENIUM_HUB:   UI/Tests/SearchWeatherByCity.robot`
   
 5. Verify execution results/reports
 - RobotFramework reports will be placed under **Result_execution** folder

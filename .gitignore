@@ -12,3 +12,7 @@ out/
 output/
 videos/
 venv/
+/pabot_results/0/
+/.pabotsuitenames
+/api_results/pabot_results/0/robot_stdout.out
+/api_results/pabot_results/0/robot_stderr.out

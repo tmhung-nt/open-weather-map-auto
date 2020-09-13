@@ -1,5 +1,6 @@
 *** Settings ***
 Resource        ../Resources/K_API_Validations.robot
+Resource        ../Resources/K_FindByCity.robot
 Resource        ../Resources/R_API_Common.robot
 Resource        ../../environments.robot
 Library         REST              ${APP_URL}
@@ -7,10 +8,10 @@ Test Setup     Expect response body      ${EXECDIR}/APIs/Resources/FindByCityMod
 
 *** Test Cases ***
 Valid city
-    REST.GET         ${FIND_WITHOUT_CALL_BACK}ho%20chi%20minh
+    Find By City Name       ho chi minh
     Reponse Status Code Should Be   200
 
 Invalid city
     REST.Expect response body      {}
-    REST.GET         ${FIND_WITHOUT_CALL_BACK}hoChiMinh
+    Find By City Name       hoChi Minh
     Reponse Status Code Should Be   200
