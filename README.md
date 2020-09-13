@@ -80,3 +80,9 @@ Run following command in your terminal
 3. Execute script __*run-test-in-docker.bat*__ 
 4. Verify execution reports under **test-results** folder
 
+## Run Load Test
+1. Run With Web UI to monitor
+`locust -f LoadTest/findByCityLoadTest.py  --host https://openweathermap.org -u 1000 -r 10 --step-load --step-users 50 --step-time 20s`
+
+2. Run Without Web UI
+`locust -f LoadTest/findByCityLoadTest.py --csv=example --host https://openweathermap.org --headless -u 100 -r 10 --run-time 60s --step-load --step-users 10 --step-time 10s`

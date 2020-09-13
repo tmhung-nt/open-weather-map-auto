@@ -1,4 +1,8 @@
 *** Settings ***
+Documentation  For demo purpose only, the json Modal is generated from API response using onine tool
+...            and it is not unofficical one. Hence, test may fail if the current weather doesn't have some attributes.
+...            For example, if it is not rain at the time test is ran, the test will fail
+
 Resource        ../Resources/K_API_Validations.robot
 Resource        ../Resources/K_FindByCity.robot
 Resource        ../Resources/R_API_Common.robot

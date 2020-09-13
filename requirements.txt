@@ -9,4 +9,4 @@ robotframework-faker
 webdrivermanager
 RESTinstance
 robotframework-datadriver
-RESTinstance
+locust
