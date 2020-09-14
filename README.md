@@ -7,8 +7,9 @@ http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
 
 
 ## Prerequisites
-- python3 and pip3 are required to run this framework 
-- nodejs and npm are required to run API testing plus Load Testing 
+- `python3` and `pip3` are required to run this framework 
+- `nodejs` and `npm` are required to run `API testing` plus `Load Testing`
+- `allure cli` to generate allure report from execution results
 
 
 ## Install plugin in Pycharm IDE
@@ -68,27 +69,24 @@ Run following command in your terminal
 5. Verify execution results/reports
 - RobotFramework reports will be placed under **Result_execution** folder, just need to open `*report.html` or `*log.html`
 - We can view Allure report for historical test status as well by generating from allure's log files under `test-results` folder  
-```
- sudo apt-get intall allure -y 
- allure generate test-results -o allure-report
-```
+`allure generate test-results -o allure-report`
 
-## Run test in Zalenium Docker
+## Run UI test in Zalenium Docker
 1. Make sure all the line ending type of all *.sh should be in LF (not CRLF of Windows)
 2. Open terminal
 3. Execute script __*run-test-in-docker.bat*__ 
 4. Verify execution reports under **test-results** folder
 
 ## Run API Tests
-1. Run Data Driven test 
-`pabot -d api_results/  APIs/Tests/FindByCityDataDriven.robot.robot`
+1. Run all API tests in parallel   
+`pabot -d api_results/  APIs/Tests`
 
-2. Run Modal Driven test 
-`pabot -d api_results/ -v APP_URL:"http://localhost:7777" APIs/Tests/FindByCityDataDriven.robot.robot`
+2. Run Modal Driven test in parallel  
+`pabot -d api_results/ -v APP_URL:"http://localhost:7777" APIs/Tests/FindByCityModalDriven.robot`
 
 ## Run Load Tests
-1. Run With Web UI to monitor
-`locust -f LoadTest/findByCityLoadTest.py  --host https://openweathermap.org -u 1000 -r 10 --step-load --step-users 50 --step-time 20s`
+1. Run Load Test  
+`npm run loadtest`
 
-2. Run Without Web UI
-`locust -f LoadTest/findByCityLoadTest.py --csv=example --host https://openweathermap.org --headless -u 100 -r 10 --run-time 60s --step-load --step-users 10 --step-time 10s`
+2. Generate Load Test report  
+`npm run loadtest_report`
