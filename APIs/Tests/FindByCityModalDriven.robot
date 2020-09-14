@@ -10,7 +10,10 @@ Resource        ../Resources/K_API_Validations.robot
 Resource        ../Resources/K_FindByCity.robot
 Resource        ../Resources/R_API_Common.robot
 Resource        ../../environments.robot
-Suite Setup     Expect response body      ${EXECDIR}/APIs/Resources/FindByCityModal.json
+Library         Process
+Suite Setup     Start Process    APIs/start_stubmatic.sh    shell=True
+Suite Teardown  Terminate All Processes
+Test Setup      Wait For Process    timeout=3s
 
 *** Test Cases ***
 Valid city
