@@ -21,3 +21,6 @@ venv/
 /node_modules/
 package-lock.json
 /APIs/Tests/test.robot
+.venv/
+loadTest_report.json.*
+loadTest_report.json
