@@ -5,20 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stubmatic": "stubmatic -v --logs --debug -d stub-repo"
+    "stubmatic": "stubmatic -v --logs --debug -d stub-repo",
+    "loadtest": "artillery run -o loadTest_report.json LoadTest/loadTestConfig.yaml",
+    "loadtest_report": "artillery report loadTest_report.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tmhung-nt/ui-auto-prototype.git"
+    "url": "git+https://github.com/tmhung-nt/open-weather-map-auto.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tmhung-nt/ui-auto-prototype/issues"
+    "url": "https://github.com/tmhung-nt/open-weather-map-auto/issues"
   },
-  "homepage": "https://github.com/tmhung-nt/ui-auto-prototype#readme",
+  "homepage": "https://github.com/tmhung-nt/open-weather-map-auto#readme",
   "dependencies": {
+    "all-the-cities": "^3.1.0",
+    "artillery": "^1.6.1",
     "stubmatic": "^5.4.1"
   }
 }

@@ -22,3 +22,6 @@ venv/
 /example_stats_history.csv
 /node_modules/
 package-lock.json
+.venv/
+loadTest_report.json.*
+loadTest_report.json

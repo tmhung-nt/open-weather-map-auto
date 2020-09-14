@@ -1,0 +1,15 @@
+config:
+  target: 'https://openweathermap.org'
+  phases:
+    - duration: 300
+      arrivalRate: 3
+  processor: "./customProcessor.js"          
+scenarios:
+  - flow:
+    - function: "getRandomCityName"
+    - get:
+        url: "/data/2.5/find?type=like&sort=population&cnt=30&appid=439d4b804bc8187953eb36d2a8c26a02&_=1600071000335&q={{ cityName }}"
+        expect:
+            - statusCode: 200
+            - contentType: json
+    - log: "Sent GET request with {{ cityName }}"
