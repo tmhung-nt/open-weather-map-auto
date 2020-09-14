@@ -14,9 +14,7 @@ videos/
 venv/
 /pabot_results/0/
 /.pabotsuitenames
-/api_results/pabot_results/0/robot_stdout.out
-/api_results/pabot_results/0/robot_stderr.out
-/api_results/pabot_results/
+/api_results/
 /example_stats.csv
 /example_failures.csv
 /example_stats_history.csv

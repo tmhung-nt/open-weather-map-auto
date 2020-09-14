@@ -1,0 +1,13 @@
+-  request:
+      method: GET
+      url: /data/2.5/find
+      query:
+        type: like
+        sort: population
+        cnt: 30
+        appid: ([a-zA-Z0-9]+)
+        _: .*
+        q: .*
+
+   response:
+      files: ["/<% query.1 %>/find-response.txt", {"name":"open-weather-map-fault.txt","status":500}]

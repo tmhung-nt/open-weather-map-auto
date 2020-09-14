@@ -11,7 +11,7 @@
         "status": 200
       }
     },
-    "requests": ["mappings/response.yaml", "mappings/post.yaml"]
+    "requests": ["mappings/openWeatherMap.yaml"]
   },
   "server": {
     "port": 7777

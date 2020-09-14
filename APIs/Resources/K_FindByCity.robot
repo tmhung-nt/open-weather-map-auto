@@ -7,10 +7,10 @@ Library         ../../Libraries/UrlEncodeDecode.py
 
 *** Keywords ***
 Find By City Name
-    [Arguments]  ${city_name}   ${api_key_to_use}=${EMPTY}
+    [Arguments]  ${city_name}  ${api_key_to_use}=${EMPTY}
     ${encode_url}=  encode url   ${city_name}
-    ${test_url} =  Run Keyword If  "${api_key_to_use}"=="${EMPTY}"      Set Variable    ${FIND_BY_CITY_ENDPOINT}${API_KEY}
-    ...  ELSE       Set Variable    ${FIND_BY_CITY_ENDPOINT}${api_key_to_use}
+    ${test_url} =  Run Keyword If  "${api_key_to_use}"=="${EMPTY}"      Set Variable    ${FIND_BY_CITY_ENDPOINT}&appid=${API_KEY}
+    ...  ELSE       Set Variable    ${FIND_BY_CITY_ENDPOINT}&appid=${api_key_to_use}
 
     REST.GET    ${test_url}&q=${encode_url}
     REST.Output     $
