@@ -6,6 +6,10 @@ output_match=true
 shift
 cmd="$@"
 
+if [ -d "/tests/node_modules" ]; then
+  npm i
+fi
+
 >&2 echo "wait-for-selenium.sh: checking status of URL ${url}"
 
 until curl -s "${url}" | grep "${output_match}" 2>&1 > /dev/null; do
