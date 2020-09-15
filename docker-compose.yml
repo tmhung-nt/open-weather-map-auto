@@ -24,4 +24,5 @@ services:
     volumes:
       - ./:/tests
       - ./test-results/reports:/tests/out:rw
+      - ./test-results/loadTest:/tests/artillery:rw
       - ./test-results/allure:/tests/output/allure:rw

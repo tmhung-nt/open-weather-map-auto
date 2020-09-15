@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "stubmatic": "stubmatic -v --logs --debug -d stub-repo",
     "loadtest": "artillery run -o loadTest_report.json LoadTest/loadTestConfig.yaml",
-    "loadtest_report": "artillery report loadTest_report.json"
+    "loadtest_report": "artillery report --output artillery/report.html loadTest_report.json"
   },
   "repository": {
     "type": "git",

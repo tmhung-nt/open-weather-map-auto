@@ -5,14 +5,14 @@ call docker pull elgalu/selenium
 
 cls
 
-echo "start zalenium"
-call docker-compose up -d zalenium
+echo "start zalenium hub"
+call docker-compose up -d hub
 
 echo "run test"
 call docker-compose up --build robot
 
-echo "Sleep 10 second(s)"
-ping 127.0.0.1 -n 11 > nul
+echo "Sleep 5 second(s)"
+ping 127.0.0.1 -n 5 > nul
 
 call docker-compose down
 
