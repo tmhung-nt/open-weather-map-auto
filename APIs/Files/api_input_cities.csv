@@ -7,4 +7,4 @@ find by city id instead of name;1580578;200;accurate;200;0;${EMPTY}
 find by @$%^&* string;@$%^&*;200;accurate;200;0;${EMPTY}
 find by empty string;${EMPTY};500;Internal server error;500;${EMPTY};${EMPTY}
 find by # character;#;500;Internal server error;500;${EMPTY};${EMPTY}
-correct city but invalid API key;nha trang;401;Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.;401;${EMPTY};invalidAPIKey
+correct city but invalid API key;nha trang;401;Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.;401;${EMPTY};invalidApiKey01
