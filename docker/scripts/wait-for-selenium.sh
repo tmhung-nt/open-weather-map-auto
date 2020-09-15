@@ -1,10 +1,18 @@
 #!/bin/bash -ue
 
+if [ ! -d "/tests/node_modules" ]; then
+  npm i
+fi
+
 url="${1}/wd/hub/status"
 output_match=true
 
 shift
 cmd="$@"
+
+if [ -d "/tests/node_modules" ]; then
+  npm i
+fi
 
 >&2 echo "wait-for-selenium.sh: checking status of URL ${url}"
 

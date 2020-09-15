@@ -2,17 +2,25 @@
 
 ## Run test with Docker (To integrate with CI tools)
 1. Open terminal
-2. Execute script __*run-test-in-docker.sh*__ or __*run_test-in-docker.bat*__ if you're on Windows OS
+2. Execute script __*run-test-in-docker.sh*__
 - This script will execute tests that are listed under __*ExecutionScripts/docker-execution/toBeExecuted*__ folder  
 - By default, UI, API and LoadTesting scripts will be executed  
 - If you want to run more tests, just need to edit the existing scripts under that folder or add new bash script for your required test suite
 - To exclude some tests out of Docker execution, just need to move them out of the `toBeExecuted` folder
 3. During UI automation tests execution, you can see the live preview at <http://localhost:4444/grid/admin/live>
 4. Verify execution reports under **test-results** folder
+5. Verify execution results/reports **test-results** folder
+- We can view Allure report for historical test status and more summary report as well by generating from allure's log files under `test-results/allure/` folder  
+`allure serve test-results/allure`  
 
 *__NOTES__*  
-- The Dockerfile under __*docker/robot*__ folder is used to build python test runner. We don't have to build it manually, Docker Hub wil take care of it when there is a new commit to `master` branch, just need to pull it.
-
+1. The Dockerfile under __*docker/robot*__ folder is used to build python test runner. We don't have to build it manually, Docker Hub wil take care of it when there is a new commit to `master` branch, just need to pull it.  
+2. If you're on Windows machine, you can run __*run-test-in-docker.bat*__ to execute the tests. However, please run following commands on the project root folder first to convert all `*.sh` files to use Unix EOL (LF) instead of Windows EOL (CRLF)  
+```
+git config core.autocrlf false
+git rm --cached -r . 
+git reset --hard
+```
 ## Run test locally without Docker (To use during test script development)
 ### Prerequisites
 - `python3` and `pip3` are required to run this framework 
@@ -70,12 +78,7 @@ Run following command in your terminal
 
 4. Parallel execution by replace `robot` with `pabot` in the execution command
     - **Examples:**  
-`pabot --testlevelsplit -d Result_execution/parallel --logtitle "Parallel Test Log" --reporttitle "Parallel Test Report"  --listener 'allure_robotframework;test-results/allure' -v SELENIUM_HUB:   UI/Tests/SearchWeatherByCity.robot`
-  
-5. Verify execution results/reports
-- RobotFramework reports will be placed under **Result_execution** folder, just need to open `*report.html` or `*log.html`
-- We can view Allure report for historical test status as well by generating from allure's log files under `test-results` folder  
-`allure generate test-results -o allure-report`
+`pabot --testlevelsplit -d Result_execution/parallel --logtitle "Parallel Test Log" --reporttitle "Parallel Test Report"  --listener 'allure_robotframework;test-results/allure' -v SELENIUM_HUB:   UI/Tests/SearchWeatherByCity.robot`  
 
 ## Run API Tests
 1. Run all API tests in parallel   
