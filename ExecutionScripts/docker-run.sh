@@ -2,6 +2,9 @@
 #
 find . -type f -iname "*.sh" -exec chmod +x {} \;
 
+pip install -r requirements.txt
+npm i
+
 workDir=$(pwd)
 
 scriptDir="ExecutionScripts/docker-execution/shell"
