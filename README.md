@@ -1,13 +1,17 @@
 # OpenWeatherMap Automation
 
-## Run test in Zalenium Docker (To integrate with CI tools)
+## Run test with Docker (To integrate with CI tools)
 1. Open terminal
-2. Execute script __*run-test-in-docker.sh*__ 
-- This script will execute tests that are listed under __*ExecutionScripts/docker-execution/toBeExecuted*__ folder.  
+2. Execute script __*run-test-in-docker.sh*__ or __*run_test-in-docker.bat*__ if you're on Windows OS
+- This script will execute tests that are listed under __*ExecutionScripts/docker-execution/toBeExecuted*__ folder  
+- By default, UI, API and LoadTesting scripts will be executed  
 - If you want to run more tests, just need to edit the existing scripts under that folder or add new bash script for your required test suite
 - To exclude some tests out of Docker execution, just need to move them out of the `toBeExecuted` folder
 3. During UI automation tests execution, you can see the live preview at <http://localhost:4444/grid/admin/live>
 4. Verify execution reports under **test-results** folder
+
+*__NOTES__*  
+- The Dockerfile under __*docker/robot*__ folder is used to build python test runner. We don't have to build it manually, Docker Hub wil take care of it when there is a new commit to `master` branch, just need to pull it.
 
 ## Run test locally without Docker (To use during test script development)
 ### Prerequisites
