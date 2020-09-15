@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation  Common keywords to verify API response
+Library  String
 
 *** Keywords ***
 Reponse Status Code Should Be
@@ -29,3 +30,9 @@ Reponse Field Value Should Be Array
 Response Field Value Should Not Exist
     [Arguments]  ${json_path}
     REST.Missing    ${json_path}
+
+Check String Contains Pattern
+    [Arguments]  ${string}  ${pattern}
+    ${ret}=   Get Lines Containing String   ${string}  ${pattern}
+    Run Keyword If   "${ret}"!="${EMPTY}"   Return From Keyword   ${TRUE}
+    ...  ELSE   Return From Keyword  ${FALSE}

@@ -1,9 +1,10 @@
-*** Test Cases ***;${search_keyword};${resp_status_code};${message_field};${cod_field};${count_field}
-correct city name;nha trang;200;accurate;200;1
-correct city with country code 1;ho chi minh, vn;200;accurate;200;2
-correct city with country code 2;melbourn, AUS;200;accurate;200;1
-incorrect city name;asdf;200;accurate;200;0
-find by city id instead of name;1580578;200;accurate;200;0
-find by @$%^&* string;@$%^&*;200;accurate;200;0
-find by empty string;${EMPTY};500;Internal server error;500;${EMPTY}
-find by # character;#;500;Internal server error;500;${EMPTY}
+*** Test Cases ***;${search_keyword};${resp_status_code};${message_field};${cod_field};${count_field};${api_key}
+correct city name;nha trang;200;accurate;200;1;${EMPTY}
+correct city with country code 1;ho chi minh, vn;200;accurate;200;2;${EMPTY}
+correct city with country code 2;melbourn, AUS;200;accurate;200;1;${EMPTY}
+incorrect city name;asdf;200;accurate;200;0;${EMPTY}
+find by city id instead of name;1580578;200;accurate;200;0;${EMPTY}
+find by @$%^&* string;@$%^&*;200;accurate;200;0;${EMPTY}
+find by empty string;${EMPTY};500;Internal server error;500;${EMPTY};${EMPTY}
+find by # character;#;500;Internal server error;500;${EMPTY};${EMPTY}
+correct city but invalid API key;nha trang;401;Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.;401;${EMPTY};invalidApiKey01

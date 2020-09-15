@@ -1,0 +1,97 @@
+{
+  "message": "accurate",
+  "cod": "200",
+  "count": 2,
+  "list": [
+    {
+      "id": 1566083,
+      "name": "Thanh pho Ho Chi Minh",
+      "coord": {
+        "lat": 10.75,
+        "lon": 106.6667
+      },
+      "main": {
+        "temp": 297.15,
+        "feels_like": 299.75,
+        "temp_min": 297.15,
+        "temp_max": 297.15,
+        "pressure": 1008,
+        "humidity": 100
+      },
+      "dt": 1600085405,
+      "wind": {
+        "speed": 4.6,
+        "deg": 10
+      },
+      "sys": {
+        "country": "VN"
+      },
+      "rain": {
+        "1h": 3.16
+      },
+      "snow": null,
+      "clouds": {
+        "all": 75
+      },
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "moderate rain",
+          "icon": "10n"
+        },
+        {
+          "id": 202,
+          "main": "Thunderstorm",
+          "description": "thunderstorm with heavy rain",
+          "icon": "11n"
+        }
+      ]
+    },
+    {
+      "id": 1580578,
+      "name": "Thành phố Hồ Chí Minh",
+      "coord": {
+        "lat": 10.8333,
+        "lon": 106.6667
+      },
+      "main": {
+        "temp": 297.15,
+        "feels_like": 299.75,
+        "temp_min": 297.15,
+        "temp_max": 297.15,
+        "pressure": 1008,
+        "humidity": 100
+      },
+      "dt": 1600085405,
+      "wind": {
+        "speed": 4.6,
+        "deg": 10
+      },
+      "sys": {
+        "country": "VN"
+      },
+      "rain": {
+        "1h": 2.05
+      },
+      "snow": null,
+      "clouds": {
+        "all": 75
+      },
+      "weather": [
+        {
+          "id": 501,
+          "main": "Rain",
+          "description": "moderate rain",
+          "icon": "10n"
+        },
+        {
+          "id": 202,
+          "main": "Thunderstorm",
+          "description": "thunderstorm with heavy rain",
+          "icon": "11n"
+        }
+      ]
+    }
+  ]
+}

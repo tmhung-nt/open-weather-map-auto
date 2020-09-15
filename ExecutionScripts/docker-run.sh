@@ -4,7 +4,7 @@ find . -type f -iname "*.sh" -exec chmod +x {} \;
 
 workDir=$(pwd)
 
-scriptDir="ExecutionScripts/docker-execution/shell"
+scriptDir="ExecutionScripts/docker-execution/toBeExecuted"
 
 ls $scriptDir
 

@@ -15,15 +15,13 @@ services:
             ]
 
   robot:
-    build:
-      context: .
-      dockerfile: docker/robot/Dockerfile
+    image: tmhung62/python-test-runner
     depends_on:
       - hub
     environment:
       - SELENIUM_URL=http://hub:4444
       - ROBOT_ARGS
     volumes:
-      - ./:/tests:rw
+      - ./:/tests
       - ./test-results/reports:/tests/out:rw
       - ./test-results/allure:/tests/output/allure:rw

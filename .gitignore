@@ -14,5 +14,13 @@ videos/
 venv/
 /pabot_results/0/
 /.pabotsuitenames
-/api_results/pabot_results/0/robot_stdout.out
-/api_results/pabot_results/0/robot_stderr.out
+/api_results/
+/example_stats.csv
+/example_failures.csv
+/example_stats_history.csv
+/node_modules/
+package-lock.json
+/APIs/Tests/test.robot
+.venv/
+loadTest_report.json.*
+loadTest_report.json
