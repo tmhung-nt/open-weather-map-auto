@@ -1,17 +1,29 @@
 const cities = require('all-the-cities');
 
-const randomCityName = () => {
-
-    const citi_names = cities.map(city => city.name + ', ' + city.country);
-    
-    return encodeURI(citi_names[Math.floor(Math.random() * citi_names.length)]);
+const getRandomFromArray = (_array) => {
+  return _array[Math.floor(Math.random() * _array.length)];
 }
 
-const randomGoodbye = () => {
-  return `Goodbye, I will be back on ${faker.date.weekday()}`;
+const randomCityName = () => {
+      const cityList = [
+        'nha trang, vn', 'Esbjerg', 'Horsens', 'Kolding', 'Silkeborg', 'Ringsted', 'Skive', 'Varde',
+        'Hajjah', 'Aden', 'Al Hudaydah'
+      ];
+    const city_names = cities.map(city => {
+      const name = city.name.match("^[A-Za-z]+$"); 
+      return name ? city.name + ',' + city.country : getRandomFromArray(cityList);
+    });
+    const random_name = getRandomFromArray(city_names);
+    
+    return random_name;
+}
+
+const encodeString = (_input) => {
+  return encodeURI(_input);
 }
 
 module.exports.getRandomCityName = (userContext, events, done) => {
   userContext.vars.cityName = randomCityName();
+  userContext.vars.cityNameEncode = encodeString(userContext.vars.cityName);
   done();
 };
