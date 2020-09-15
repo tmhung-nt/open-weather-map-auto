@@ -12,7 +12,7 @@ RUN apk --no-cache update && apk add --no-cache --virtual .build-deps \
 		py-pip jpeg-dev zlib-dev npm  curl \
 	&& pip install --upgrade pip  && pip install -r requirements.txt  && npm i &&  rm -rf /var/cache/apk/*
 
-RUN sysctl net.ipv4.ip_local_port_range="15000 61000" && sysctl net.ipv4.tcp_fin_timeout=30
+# RUN sysctl net.ipv4.ip_local_port_range="15000 61000" && sysctl net.ipv4.tcp_fin_timeout=30
 
 ENV LIBRARY_PATH=/lib:/usr/lib
 
