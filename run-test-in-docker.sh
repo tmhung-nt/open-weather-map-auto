@@ -12,7 +12,7 @@ echo "start zalenium"
 docker-compose up -d hub
 
 echo "run test"
-docker-compose up --build --force-recreate  robot
+docker-compose up --build robot
 
 echo "Sleep 10 second(s)"
 sleep 10

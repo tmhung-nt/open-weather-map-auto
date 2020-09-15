@@ -15,9 +15,7 @@ services:
             ]
 
   robot:
-    build:
-      context: .
-      dockerfile: docker/robot/Dockerfile
+    image: tmhung62/python-test-runner
     depends_on:
       - hub
     environment:
