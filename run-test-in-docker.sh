@@ -2,7 +2,7 @@
 
 find . -type f -iname "*.sh" -exec chmod +x {} \;
 
-docker pull tmhung62/python3-alpine3.8
+docker pull tmhung62/python-test-runner
 
 docker pull elgalu/selenium
 

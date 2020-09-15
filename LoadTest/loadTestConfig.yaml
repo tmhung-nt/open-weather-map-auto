@@ -3,7 +3,7 @@ config:
   ensure:
     p95: 2000
   phases:
-    - duration: 300
+    - duration: 60
       arrivalRate: 3
   processor: "./customProcessor.js"          
 scenarios:

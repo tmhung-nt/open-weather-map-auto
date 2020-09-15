@@ -22,6 +22,6 @@ services:
       - SELENIUM_URL=http://hub:4444
       - ROBOT_ARGS
     volumes:
-      - ./:/tests:rw
+      - ./:/tests
       - ./test-results/reports:/tests/out:rw
       - ./test-results/allure:/tests/output/allure:rw
