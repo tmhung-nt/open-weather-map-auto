@@ -5,3 +5,4 @@ Results/
 venv/
 debug.log
 videos/
+node_modules/

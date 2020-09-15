@@ -11,8 +11,13 @@
 4. Verify execution reports under **test-results** folder
 
 *__NOTES__*  
-- The Dockerfile under __*docker/robot*__ folder is used to build python test runner. We don't have to build it manually, Docker Hub wil take care of it when there is a new commit to `master` branch, just need to pull it.
-
+1. The Dockerfile under __*docker/robot*__ folder is used to build python test runner. We don't have to build it manually, Docker Hub wil take care of it when there is a new commit to `master` branch, just need to pull it.  
+2. If you're on Windows machine, you would need to run following commands on the project root folder to convert all `*.sh` files to use Unix EOL (LF) instead of Windows EOL (CRLF)  
+```
+git config core.autocrlf false
+git rm --cached -r . 
+git reset --hard
+```
 ## Run test locally without Docker (To use during test script development)
 ### Prerequisites
 - `python3` and `pip3` are required to run this framework 
