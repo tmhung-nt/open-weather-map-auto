@@ -1,5 +1,9 @@
 #!/bin/bash -ue
 
+if [ ! -d "/tests/node_modules" ]; then
+  npm i
+fi
+
 url="${1}/wd/hub/status"
 output_match=true
 

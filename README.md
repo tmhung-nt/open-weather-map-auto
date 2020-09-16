@@ -2,7 +2,7 @@
 
 ## Run test with Docker (To integrate with CI tools)
 1. Open terminal
-2. Execute script __*run-test-in-docker.sh*__ or __*run_test-in-docker.bat*__ if you're on Windows OS
+2. Execute script __*run-test-in-docker.sh*__
 - This script will execute tests that are listed under __*ExecutionScripts/docker-execution/toBeExecuted*__ folder  
 - By default, UI, API and LoadTesting scripts will be executed  
 - If you want to run more tests, just need to edit the existing scripts under that folder or add new bash script for your required test suite
@@ -12,7 +12,7 @@
 
 *__NOTES__*  
 1. The Dockerfile under __*docker/robot*__ folder is used to build python test runner. We don't have to build it manually, Docker Hub wil take care of it when there is a new commit to `master` branch, just need to pull it.  
-2. If you're on Windows machine, you would need to run following commands on the project root folder to convert all `*.sh` files to use Unix EOL (LF) instead of Windows EOL (CRLF)  
+2. If you're on Windows machine, you can run __*run-test-in-docker.bat*__ to execute the tests. However, please run following commands on the project root folder first to convert all `*.sh` files to use Unix EOL (LF) instead of Windows EOL (CRLF)  
 ```
 git config core.autocrlf false
 git rm --cached -r . 
