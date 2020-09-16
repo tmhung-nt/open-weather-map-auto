@@ -9,6 +9,9 @@
 - To exclude some tests out of Docker execution, just need to move them out of the `toBeExecuted` folder
 3. During UI automation tests execution, you can see the live preview at <http://localhost:4444/grid/admin/live>
 4. Verify execution reports under **test-results** folder
+5. Verify execution results/reports **test-results** folder
+- We can view Allure report for historical test status and more summary report as well by generating from allure's log files under `test-results/allure/` folder  
+`allure serve test-results/allure`  
 
 *__NOTES__*  
 1. The Dockerfile under __*docker/robot*__ folder is used to build python test runner. We don't have to build it manually, Docker Hub wil take care of it when there is a new commit to `master` branch, just need to pull it.  
@@ -75,12 +78,7 @@ Run following command in your terminal
 
 4. Parallel execution by replace `robot` with `pabot` in the execution command
     - **Examples:**  
-`pabot --testlevelsplit -d Result_execution/parallel --logtitle "Parallel Test Log" --reporttitle "Parallel Test Report"  --listener 'allure_robotframework;test-results/allure' -v SELENIUM_HUB:   UI/Tests/SearchWeatherByCity.robot`
-  
-5. Verify execution results/reports
-- RobotFramework reports will be placed under **Result_execution** folder, just need to open `*report.html` or `*log.html`
-- We can view Allure report for historical test status as well by generating from allure's log files under `test-results` folder  
-`allure generate test-results -o allure-report`
+`pabot --testlevelsplit -d Result_execution/parallel --logtitle "Parallel Test Log" --reporttitle "Parallel Test Report"  --listener 'allure_robotframework;test-results/allure' -v SELENIUM_HUB:   UI/Tests/SearchWeatherByCity.robot`  
 
 ## Run API Tests
 1. Run all API tests in parallel   

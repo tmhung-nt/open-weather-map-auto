@@ -24,3 +24,4 @@ package-lock.json
 .venv/
 loadTest_report.json.*
 loadTest_report.json
+allure-report/
