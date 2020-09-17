@@ -14,7 +14,11 @@ docker-compose up -d hub
 echo "run test"
 docker-compose up --build robot
 
+_run_status=$?
+
 echo "Sleep 10 second(s)"
 sleep 10
 
 docker-compose down
+
+exit $_run_status
