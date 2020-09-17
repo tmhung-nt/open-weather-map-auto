@@ -1,4 +1,4 @@
-# OpenWeatherMap Automation
+[![Build Status](https://travis-ci.org/tmhung-nt/open-weather-map-auto.svg)](https://travis-ci.org/tmhung-nt/open-weather-map-auto)# OpenWeatherMap Automation
 
 ## Run test with Docker (To integrate with CI tools)
 1. Open terminal
