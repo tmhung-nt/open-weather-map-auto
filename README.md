@@ -1,6 +1,7 @@
-# OpenWeatherMap Automation
+# OpenWeatherMap Automation  
+[![Build Status](https://travis-ci.org/tmhung-nt/open-weather-map-auto.svg)](https://travis-ci.org/tmhung-nt/open-weather-map-auto)
 
-## Run test with Docker (To integrate with CI tools)
+## Run test with Docker (To integrate with [Travis CI tools](https://travis-ci.org/github/tmhung-nt/open-weather-map-auto))
 1. Open terminal
 2. Execute script __*run-test-in-docker.sh*__
 - This script will execute tests that are listed under __*ExecutionScripts/docker-execution/toBeExecuted*__ folder  
